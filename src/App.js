@@ -1,22 +1,32 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from "react";
 import './App.css';
+import Landing from "./components/landing"
+import Register from "./components/register"
+import Login from "./components/login"
+import Success from "./components/success"
+
 
 function App() {
+  const [page, setPage] = useState('Landing');
+  const [username, setUsername] = useState(""); 
+
+  console.log(username)
+  console.log(page)
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {page === 'Landing' ? 
+          <Landing setPage={setPage} username={username} setUsername={setUsername}/> 
+          : 
+          page === 'Register' ?
+            <Register/> 
+            :
+            page === 'Login' ? 
+              <Login/>
+              :
+              <Success/>
+        }
       </header>
     </div>
   );

@@ -1,0 +1,60 @@
+.loginBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #18A874;
+  border-radius: 20px;
+  width:  50vw;
+  height: 50vh;
+}
+
+.impassName {
+  font-size: 42px;
+}
+
+.usernameInfo {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-content: flex-start;
+  padding-bottom: 10%;
+  height: fit-content;
+}
+
+.usernameInfo p {
+  width: fit-content;
+}
+
+.usernameField {
+  color: #01422A;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  padding: 10px 30px;
+  border-radius: 30px
+}
+
+.loginRegisterButtons {
+  display: flex;
+  gap: 10%;
+}
+
+.loginButton {
+  background-color: white;
+  color: #01422A;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  padding: 10px 30px;
+  border-radius: 30px
+}
+
+.registerButton {
+  background-color: #01422A;
+  color: white;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  padding: 10px 30px;
+  border-radius: 30px
+}

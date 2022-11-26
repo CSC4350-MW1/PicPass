@@ -1,0 +1,9 @@
+.successBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #18A874;
+  border-radius: 20px;
+  width:  50vw;
+  height: 50vh;
+}
