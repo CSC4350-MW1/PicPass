@@ -18,7 +18,7 @@ const LoginPage = () => {
         </div>
         <p>Select your ImPass images in order to log in</p>
       <div className={LoginStyles.images}>
-        {images.map((image) => <img src={image}/> )}
+        {images.map((image) => <button onClick={() => console.log("clickin that shit")}><img src={image}/></button> )}
       </div>
     </div>
   )

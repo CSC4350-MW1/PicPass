@@ -67,3 +67,9 @@
   width: 10vw;
   border-radius: 20px;
 }
+
+.images button {
+  border-radius: 20px;
+  border: none;
+  background-color: transparent;
+}

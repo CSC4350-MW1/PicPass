@@ -16,7 +16,7 @@ const RegisterPage = () => {
       </div>
       <p>Select 4 images in your preferred order to create your impass</p>
       <div className={RegisterStyles.images}>
-        {images.map((image) => <img src={image}/> )}
+        {images.map((image) => <button onClick={() => console.log("clickin that shit")}><img src={image}/></button> )}
       </div>
     </div>
   )
