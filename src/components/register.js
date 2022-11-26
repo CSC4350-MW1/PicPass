@@ -2,7 +2,7 @@ import React from 'react'
 import RegisterStyles from './register.module.css'
 import images from './images'
 
-const RegisterPage = () => {
+const RegisterPage = (props) => {
   
   return (
     <div className={RegisterStyles.registerBox}>
@@ -10,7 +10,7 @@ const RegisterPage = () => {
       <div className={RegisterStyles.usernameInfo}>
         <div>
           <p>Username</p>
-          <input type="text" className={RegisterStyles.usernameField}/>
+          <input type="text" className={RegisterStyles.usernameField} defaultValue={props.username}/>
         </div>
         <button className={RegisterStyles.createPassButton}>Create ImPass</button>
       </div>

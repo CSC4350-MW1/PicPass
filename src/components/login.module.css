@@ -45,9 +45,9 @@
 }
 
 .loginButton {
-  background-color: #01422A;
   height: fit-content;
-  color: white;
+  background-color: white;
+  color: #01422A;
   border: none;
   font-family: 'Roboto', sans-serif;
   font-size: 24px;

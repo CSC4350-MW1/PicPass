@@ -20,10 +20,10 @@ function App() {
           <Landing setPage={setPage} username={username} setUsername={setUsername}/> 
           : 
           page === 'Register' ?
-            <Register/> 
+            <Register username={username}/> 
             :
             page === 'Login' ? 
-              <Login/>
+              <Login username={username}/>
               :
               <Success/>
         }

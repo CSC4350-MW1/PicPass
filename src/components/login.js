@@ -2,17 +2,16 @@ import React from 'react'
 import LoginStyles from './login.module.css'
 import Images from './images'
 
-
 const images = Images.slice(0,12);
 
-const LoginPage = () => {
+const LoginPage = (props) => {
   return (
     <div className={LoginStyles.loginBox}>
       <p className={LoginStyles.impassName}>ImPass</p>
       <div className={LoginStyles.usernameInfo}>
         <div>
-            <p>Username</p>
-            <input type="text" className={LoginStyles.usernameField}/>
+          <p>Username</p>
+          <input type="text" className={LoginStyles.usernameField} defaultValue={props.username}/>
           </div>
           <button className={LoginStyles.loginButton} value="Log in">Login</button> 
         </div>
