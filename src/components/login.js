@@ -2,7 +2,7 @@ import React from 'react'
 import LoginStyles from './login.module.css'
 import Images from './images'
 
-const images = Images.slice(0,12);
+const images = Images.slice(0,24);
 
 const LoginPage = (props) => {
   return (
