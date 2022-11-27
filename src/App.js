@@ -8,22 +8,19 @@ import Success from "./components/success"
 
 function App() {
   const [page, setPage] = useState('Landing');
-  const [username, setUsername] = useState(""); 
-
-  console.log(username)
   console.log(page)
 
   return (
     <div className="App">
       <header className="App-header">
         {page === 'Landing' ? 
-          <Landing setPage={setPage} username={username} setUsername={setUsername}/> 
+          <Landing setPage={setPage}/> 
           : 
           page === 'Register' ?
-            <Register username={username}/> 
+            <Register/> 
             :
             page === 'Login' ? 
-              <Login username={username}/>
+              <Login/>
               :
               <Success/>
         }

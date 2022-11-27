@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import LoginStyles from './login.module.css'
 import Images from './images'
 
 const images = Images.slice(0,12);
 
 const LoginPage = (props) => {
+
   return (
     <div className={LoginStyles.loginBox}>
       <p className={LoginStyles.impassName}>ImPass</p>

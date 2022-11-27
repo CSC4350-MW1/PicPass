@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import RegisterStyles from './register.module.css'
 import images from './images'
 
 const RegisterPage = (props) => {
-  
+
   return (
     <div className={RegisterStyles.registerBox}>
       <p className={RegisterStyles.impassName}>ImPass</p>

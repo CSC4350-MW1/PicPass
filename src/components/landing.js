@@ -11,10 +11,6 @@ const LandingPage = (props) => {
   return (
     <div className={LandingStyles.loginBox}>
       <p className={LandingStyles.impassName}>ImPass</p>
-      <div className={LandingStyles.usernameInfo}>
-        <p>Username</p>
-        <input type="text" onChange={updateUser} className={LandingStyles.usernameField} />
-      </div>
       <div className= {LandingStyles.loginRegisterButtons}>
         <button type="button" onClick={() => props.setPage("Login")} className={LandingStyles.loginButton} value="Log in">Login</button>
         <button type="button" onClick={() => props.setPage("Register")} className={LandingStyles.registerButton} value="Register">Register</button>
