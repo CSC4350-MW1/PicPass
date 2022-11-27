@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import LandingStyles from './landing.module.css'
 
 const LandingPage = (props) => {
-
+  
   function updateUser(event) {
     //Validate the username here before setting
     props.setUsername(event.target.value);
