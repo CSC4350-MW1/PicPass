@@ -68,31 +68,31 @@ if(xa<4){
       password[xa]='17'
      }
      else if(images[17]==xdf){
-      alert('sfd');
+
       password[xa]='18'
      }
      else if(images[18]==xdf){
-      alert('sfd');
+      
       password[xa]='19'
      }
      else if(images[19]==xdf){
-      alert('sfd');
+      
       password[xa]='20'
      }
      else if(images[20]==xdf){
-      alert('sfd');
+      
       password[xa]='21'
      }
      else if(images[21]==xdf){
-      alert('sfd');
+      
       password[xa]='22'
      }
      else if(images[22]==xdf){
-      alert('sfd');
+      
       password[xa]='23'
      }
      else if(images[23]==xdf){
-      alert('sfd');
+      
       password[xa]='24'
      }
      xa++;
