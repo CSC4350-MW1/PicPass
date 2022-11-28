@@ -139,10 +139,10 @@ const LoginPage = (props) => {
       if ( isCorrectPassword(passwords[usernames.indexOf(username)], password)) {
         props.setPage("Success");
       } else {
-        console.log("shit");
+        alert("invalid username or password");
       }
     } else {
-      console.log("fuck");
+      alert("invalid username or password");
     }
   };
 

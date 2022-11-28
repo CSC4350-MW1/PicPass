@@ -123,7 +123,7 @@ if(xa<4){
           <p>Username</p>
           <input type="text" className={RegisterStyles.usernameField} defaultValue={props.username}/>
         </div>
-        <button className={RegisterStyles.createPassButton}>Create ImPass</button>
+        <button className={RegisterStyles.createPassButton} onClick={() => props.setPage('Landing')}>Create ImPass</button>
       </div>
       <p>Select 4 images in your preferred order to create your impass</p>
       <div className={RegisterStyles.images}>
