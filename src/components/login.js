@@ -94,8 +94,11 @@ const LoginPage = (props) => {
      console.dir(event.target);
    }
   return (
-    <div className={LoginStyles.loginBox}>
-      <p className={LoginStyles.impassName}>ImPass</p>
+    <div className={LoginStyles.loginBox}> 
+      <div className={LoginStyles.heading}>
+        <button className={LoginStyles.backButton} onClick={() => props.setPage('Landing')}>Back</button>
+        <p className={LoginStyles.impassName}>ImPass</p>
+      </div>
       <div className={LoginStyles.usernameInfo}>
         <div>
           <p>Username</p>

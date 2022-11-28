@@ -17,10 +17,10 @@ function App() {
           <Landing setPage={setPage}/> 
           : 
           page === 'Register' ?
-            <Register/> 
+            <Register setPage={setPage}/> 
             :
             page === 'Login' ? 
-              <Login/>
+              <Login setPage={setPage}/>
               :
               <Success/>
         }

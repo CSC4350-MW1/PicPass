@@ -6,7 +6,10 @@ const RegisterPage = (props) => {
 
   return (
     <div className={RegisterStyles.registerBox}>
-      <p className={RegisterStyles.impassName}>ImPass</p>
+      <div className={RegisterStyles.heading}>
+        <button className={RegisterStyles.backButton} onClick={() => props.setPage('Landing')}>Back</button>
+        <p className={RegisterStyles.impassName}>ImPass</p>
+      </div>
       <div className={RegisterStyles.usernameInfo}>
         <div>
           <p>Username</p>
