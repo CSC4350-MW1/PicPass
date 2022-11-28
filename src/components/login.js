@@ -23,7 +23,7 @@ const LoginPage = (props) => {
     var footpath=images[0];
     var xdf=imagesrc.currentSrc;
     var imagefoot="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAADdAAAA3QFwU6IHAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAm1QTFRF/////1UA1VUA34AA/7+A43EA6oAA6pVVz3AA33AAxmMA5HkA0WgA5XIA6HQAzGYA0mwA5nYA53cA5HUA0WsA02oA5HYA88CJ020A5HQA0msA1WwA02wA5XUA4qNh9MCM0GkA5XQA5HUA0GoA5HQA5nYA5Klp5XUAz2oA5HUAz2gA5XQA5ncC9cmc5XUAz2kA5XUA5XUA9Mug5XYAzWkA5XUAzWgA5XUAzGcA5XUA6Yom5bJ85nUAzWgA5XUAy2gA57eFzGYA5XUAymcA99a1+Naz5XQAymYAymcA5HUAyWYA6IUfymYA5XUA9MeW5XUAyGYAyWYA5XUA5XUAznUayGYA5XUA7cehyGUAx2UA68eh+t/F5XUA5XUAxWQA5beJ99WyxWMAxGQAy3Uc5XUAw2MA5XUA8Ne8w2MAwmIA5XUA6smnwGEAwWEAwWIAwWMEwWUGwmcKw2gLw2gMxnAYxnAZx3IcyXkmynknynopzH4vzIAyzYE0zmkAzoM30Ig/0IlB0YtD0YtE03ga03kc1ZVU1ZdX15pc2Icz2qNs3Khz3al04bWH5XUA5XYB5ngF5nsL5nsM6IMZ6IMa6IQb6IQc6Ich6Yso6o8w65M365Q67Z9N7aBQ7qVY7qZb76lg76tk79e+79e/79jA8K1n8K9r8NrD8rh88ruA8r2F89rA89zD9MSS9ebX9efY9tGp9ufZ9unb9unc+d3B+d7C+d/D+ezf+fHp+vHp+vPr++rZ++va++zb++zc+/Pr+/Ts/PTt/PXu/Pbx/Pfx/Pjz/fLn/fbu/fbv/fbx/fn0/fn1/vn1//79//7+////Actz7wAAAGx0Uk5TAAMGCAgJDAwQEBITFh0hIygpKzA3OkFBS0tPVVdXWVlcY2lxcnl6foCFkJOWmJ+jpKamp6iwsbO5uby9v8DExczR1NXV2Nvc3d3g4OHi4uPn6Ojq6+zt7e/x8fH19/j4+Pn7+/v8/Pz9/v7+vFAGPAAAAdVJREFUOE9l0uVXFlEUxeFtYovd3d0dqNit2C3Wqx4sxB6xwNzKazcmNhaY2IGKnr/JD3fizrC//p5z15q1BoiuQbfRCydNmTlnVK92jSqWqjW6LlNVLTpLkuS0JuFcu+dKxgst4Swva+Xq/daRdMX7MyQdkYZBr59ing2EIyKd/d52NRkS7w6KiCS5uVwfWjPiWYaIzHBBd4YWiPmmt2Jk8UeqqvkZMg8AUGexHS+SdNLzVFXzt84GgMoTQtcf7l0/ImLEk1kA0CXUeb749w7xxAIAVRdZ9dod3v3y+ph4YgSADvb5hR9PP+7a/mKTJ9oDFVL8evI0ef/vCfGWnvcnAWgdnJ/6mXvjU9ab7EAsBTA1HohLJd93y85MH0hfoHxJoSuuXmHur2+HxVqsCtBCtcCIy8WPP+/Z+9YGwwD0VtWCHJLkg3/HRTZafUMigDGqqi9zSPLV0a/77XtJBoDBRZ5wRPYdsHtqTQAYdM4VjkSW1hIAMJRGPNwSBT3MrzCcrrgdEeNMxwB64tZmu0+u5IJOJHnoeVT0h7dmJB3ZFhaxNn5HLdIRccVNI6bXDTrKjDXf54u08Y0RWtNUscT6kfUQXbWOAycuWRtbtWLN3CHNS9X/Aqee+TxNySIAAAAASUVORK5CYII=";
-if(xa<4){
+  if(xa<4){
     if(Images[0]==xdf){
      password[xa]='1'
     }
@@ -115,7 +115,47 @@ if(xa<4){
      console.log(footpath);
      console.log(imagesrc.currentSrc);
      console.dir(password);
-   }
+  }
+
+  var usernames = ['Tester1', "User6", "NewUser1234", "username"];
+  var passwords = [
+    ['22','16','4','0'],
+    ['9','16','12','20'],
+    ['15','7','11','18'],
+    ['1','2','3','4']     
+  ];
+
+  const [currentUsername, setCurrentUsername] = React.useState("");
+
+  const updateUsername = event => {
+    setCurrentUsername(event.target.value);
+  };
+
+  function validateLogin(username, password) {
+    console.log(password);
+    console.log(username);
+    if(usernames.includes(username)) {
+      console.log(passwords[usernames.indexOf(username)])
+      if ( isCorrectPassword(passwords[usernames.indexOf(username)], password)) {
+        props.setPage("Success");
+      } else {
+        console.log("shit");
+      }
+    } else {
+      console.log("fuck");
+    }
+  };
+
+  function isCorrectPassword(pass1, pass2) {
+    for (var i = 0; i < pass1.length; i++) {
+      if (pass1[i] !== pass2[i]) {
+        return false;
+      }
+    };
+    return true;
+  };
+  
+
   return (
     <div className={LoginStyles.loginBox}> 
       <div className={LoginStyles.heading}>
@@ -125,9 +165,9 @@ if(xa<4){
       <div className={LoginStyles.usernameInfo}>
         <div>
           <p>Username</p>
-          <input type="text" className={LoginStyles.usernameField} defaultValue={props.username}/>
+          <input type="text" className={LoginStyles.usernameField} onChange={updateUsername} defaultValue={props.username}/>
           </div>
-          <button className={LoginStyles.loginButton} value="Log in">Login</button> 
+          <button className={LoginStyles.loginButton} onClick={() => validateLogin(currentUsername, password)}value="Log in">Login</button> 
         </div>
         <p>Select your ImPass images in order to log in</p>
       <div className={LoginStyles.images}>

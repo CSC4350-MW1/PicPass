@@ -22,7 +22,8 @@ function App() {
             page === 'Login' ? 
               <Login setPage={setPage}/>
               :
-              <Success/>
+              page === 'Success' ?
+              <Success/> : <p>you should never see this</p>
         }
       </header>
     </div>
