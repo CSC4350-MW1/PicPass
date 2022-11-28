@@ -5,6 +5,7 @@ const images = Images.slice(0,24);
 var xa = 0;
 var password=[0,0,0,0];
 
+
 const RegisterPage = (props) => {
   shuffleArray(images);
   function shuffleArray(array) {
